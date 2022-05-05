@@ -1,0 +1,50 @@
+jordy@x:~/jagit$ cd 
+jordy@x:~$ mkdir profesor
+jordy@x:~$ cd profesor/
+jordy@x:~/profesor$ git clone https://github.com/rescobedoq/prueba.git
+Clonando en 'prueba'...
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 15 (delta 4), reused 13 (delta 2), pack-reused 0
+Recibiendo objetos: 100% (15/15), listo.
+Resolviendo deltas: 100% (4/4), listo.
+jordy@x:~/profesor$ ls -l
+total 4
+drwxrwxr-x 3 jordy jordy 4096 may  4 13:46 prueba
+jordy@x:~/profesor$ cd prueba
+jordy@x:~/profesor/prueba$ ls -l
+total 16
+-rw-rw-r-- 1 jordy jordy 230 may  4 13:46 Ejemplo_if_else.java
+-rw-rw-r-- 1 jordy jordy 243 may  4 13:46 Ejemplo_string.java
+-rw-rw-r-- 1 jordy jordy 189 may  4 13:46 HolaMundo.java
+-rw-rw-r-- 1 jordy jordy  38 may  4 13:46 README.md
+jordy@x:~/profesor/prueba$ git branch
+* main
+jordy@x:~/profesor/prueba$ git branch jayma
+jordy@x:~/profesor/prueba$ git branch
+  jayma
+* main
+jordy@x:~/profesor/prueba$ git chekout jayma
+git: 'chekout' no es un comando de git. Mira 'git --help'.
+
+El comando más similar es
+	checkout
+jordy@x:~/profesor/prueba$ git checkout jayma
+Cambiado a rama 'jayma'
+jordy@x:~/profesor/prueba$ touch algo.txt
+jordy@x:~/profesor/prueba$ git status
+En la rama jayma
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+	algo.txt
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+jordy@x:~/profesor/prueba$ git add algo.txt 
+jordy@x:~/profesor/prueba$ git commit -m "probando rama"
+[jayma d075214] probando rama
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 algo.txt
+jordy@x:~/profesor/prueba$ git push -u origin jayma
+Username for 'https://github.com': 888JordyEmanuelAymaCutipa888
+Password for 'https://888JordyEmanuelAymaCutipa888@github.com': 
